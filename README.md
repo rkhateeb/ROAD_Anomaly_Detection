@@ -2,6 +2,12 @@
 
 This project implements an anomaly detection system for the ROAD dataset using a custom CNN classifier built with PyTorch. The project includes data handling from HDF5 files, training with hyperparameter tuning, and model checkpointing.
 
+I originally completed this project as part of a take-home assessment. Within a limited time window of 4 days, I succeeded in developing a CNN from scratch that was able to successfully idenitfy anomalies within the dataset.
+
+## About the Dataset
+
+The Radio Observatory Anomaly Detector (ROAD) dataset is built from data collected by the LOFAR radio telescopes. Each station uses low- and high-band dual-polarization antennas to record signals across time, frequency, polarization, and location. The dataset includes nine types of anomalies (and a normal condition), grouped into system failures, electronic issues, environmental effects, and unexpected astronomical signals. It’s used to train models to detect problems in radio astronomy data.
+
 ## A short description of each file included in the directory is as follows:
 
 - `anomaly_detector.py`: The script for training the model
@@ -9,8 +15,7 @@ This project implements an anomaly detection system for the ROAD dataset using a
 - `README.md`: This file
 - `requirements.txt`: Contains the list of necessary python modules required to run the script
 - `ROAD_anomaly_detector_notebook_run.pdf`: Pdf containing the runs of the .ipynb along with the results
-- `ROAD_anomaly_detector.ipynb`: Notebook used to run and prototype the development code for CNN
-- `Report.pdf`: Written report detailing the process undergone to develop model and run experiments
+- `ROAD_anomaly_detector.ipynb`: Notebook used to run and prototype the development code for CNN (NOTE: the results at the bottom of this are from a trial run, and are not the same as the optimal results in ROAD_anomaly_detector_notebook_run.pdf)
 
 ## Overview
 
