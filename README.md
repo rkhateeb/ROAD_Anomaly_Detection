@@ -27,6 +27,22 @@ The script performs the following tasks:
 - Saves model checkpoints and records hyperparameter tuning results.
 - Provides a final visualization of the hyperparameter tuning performance.
 
+## Data Processing
+
+The ROAD dataset contains training data, testing data, and anomaly data (split into 9 categories). Each entry includes data with dimensions for time, frequency, polarization, and station, along with labels and metadata.
+
+### Loading Strategy
+Initially faced challenges with the large HDF5 file size and limited Colab resources. Tried converting to CSV and creating separate H5 files, but both approaches failed due to storage constraints. 
+
+**Final Solution**: Implemented lazy loading through a custom PyTorch dataset that accesses the original H5 file on-the-fly, avoiding memory issues while maintaining efficiency.
+
+### Data Splitting
+- Split each of the 9 anomaly categories with 80/20 train/test ratio
+- Combined normal and anomaly data for final training/testing sets
+- Used path and index tuples for efficient data retrieval
+
+This approach enabled handling the large dataset efficiently while maintaining proper data distribution.
+
 ## Features
 - **Custom Dataset**: Uses a custom `H5Dataset` class to read and transform HDF5 dataset files.
 - **CNN Classifier**: Implements a three-layer CNN with configurable base filters, kernel size, and dropout.
