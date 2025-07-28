@@ -32,7 +32,7 @@ The script performs the following tasks:
 The ROAD dataset contains training data, testing data, and anomaly data (split into 9 categories). Each entry includes data with dimensions for time, frequency, polarization, and station, along with labels and metadata.
 
 ### Loading Strategy
-Initially faced challenges with the large HDF5 file size and limited Colab resources. Tried converting to CSV and creating separate H5 files, but both approaches failed due to storage constraints. 
+Initially faced challenges with the large HDF5 file size and limited Colab resources. Tried converting to CSV and creating separate H5 files, but both approaches failed due to memory constraints. 
 
 **Final Solution**: Implemented lazy loading through a custom PyTorch dataset that accesses the original H5 file on-the-fly, avoiding memory issues while maintaining efficiency.
 
