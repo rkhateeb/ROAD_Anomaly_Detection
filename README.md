@@ -2,7 +2,7 @@
 
 This project implements an anomaly detection system for the ROAD dataset using a custom CNN classifier built with PyTorch. The project includes data handling from HDF5 files, training with hyperparameter tuning, and model checkpointing.
 
-I originally completed this project as part of a take-home assessment. Within a limited time window of 4 days, I succeeded in developing a CNN from scratch that was able to successfully idenitfy anomalies within the dataset.
+Within a limited time window of 4 days, I succeeded in developing a CNN from scratch that was able to successfully idenitfy anomalies within the dataset.
 
 ## About the Dataset
 
